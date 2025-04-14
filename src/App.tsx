@@ -19,6 +19,10 @@ const App: React.FC = () => {
     setCount(prevCount => prevCount * 2);
   };
 
+  const squareCount = () => {
+    setCount(prevCount => prevCount * prevCount);
+  };
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -92,6 +96,19 @@ const App: React.FC = () => {
           }}
         >
           Double
+        </button>
+        <button 
+          onClick={squareCount} 
+          style={{ 
+            padding: '0.5rem 1rem', 
+            fontSize: '1rem', 
+            backgroundColor: '#9775fa', 
+            border: 'none', 
+            borderRadius: '4px', 
+            cursor: 'pointer' 
+          }}
+        >
+          Square
         </button>
       </div>
     </div>
