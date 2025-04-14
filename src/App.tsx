@@ -15,6 +15,10 @@ const App: React.FC = () => {
     setCount(0);
   };
 
+  const doubleCount = () => {
+    setCount(prevCount => prevCount * 2);
+  };
+
   return (
     <div style={{ 
       display: 'flex', 
@@ -75,6 +79,19 @@ const App: React.FC = () => {
           }}
         >
           Increment
+        </button>
+        <button 
+          onClick={doubleCount} 
+          style={{ 
+            padding: '0.5rem 1rem', 
+            fontSize: '1rem', 
+            backgroundColor: '#40c057', 
+            border: 'none', 
+            borderRadius: '4px', 
+            cursor: 'pointer' 
+          }}
+        >
+          Double
         </button>
       </div>
     </div>
